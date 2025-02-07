@@ -44,6 +44,16 @@ std::string Fraction::toString() const
     return std::to_string(numerator) + "/" + std::to_string(denominator);
 }
 
+Fraction Fraction::operator*(Fraction other)
+{
+    return Multiply(other);
+}
+
+Fraction Fraction::operator+(Fraction other)
+{
+    return Add(other);
+}
+
 std::ostream& operator<<(std::ostream &out, const Fraction &f)
 {
     out << f.toString();
